@@ -1,0 +1,127 @@
+:root {
+  --bg: #fef6e4;
+  --text-dark: #001858;
+  --text-main: #172c66;
+  --bg-button: #f582ae;
+  --bg-card-primary: #f3d2c1;
+  --bg-card-secondary: #8bd3dd;
+}
+
+section, 
+footer, 
+header, 
+main,
+nav {
+  display: block;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1rem;
+  color: var(--text-main);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+
+.container {
+  max-width: 1400px;
+  width: 100%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.page-head {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.page-head h1{
+  margin-right: 15px;
+  margin-bottom: 12px;
+}
+
+.page-head h1,
+.page-head i {
+  font-size: 3rem;
+}
+
+.btn {
+  background-color: var(--bg-button);
+  border: none;
+  border-radius: 8px;
+  padding: 5px 8px;
+  margin: 0 8px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--bg-card-primary);
+  width: 300px;
+  height: 350px;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px;
+}
+
+.card:hover, 
+.btn:hover {
+  box-shadow: 7px 7px 11px 1px rgba(88,86,86,0.69);
+  cursor: pointer;
+}
+
+.card:hover {
+  background-color: var(--bg-card-secondary);
+}
+
+#favorites-container .card {
+  background-color: var(--bg-card-secondary);
+}
+
+#favorites-container .card:hover {
+  background-color: var(--bg-card-primary);
+}
+
+.card .img-wrap {
+  max-width: 250px;
+  max-height: 200px;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+li {
+  margin-right: 20px;
+}

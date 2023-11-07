@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOGgone Cute!</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="container">
+      <div class="page-head">
+        <h1>DOGgone Cute!</h1>
+        <i class="fa-solid fa-dog"></i>
+      </div>
+      <p>Click on a dog from the <strong>Cuties Collection</strong> to move it to <strong>Your Favorite Cuties List</strong><br>Click on it again to move it back to the <strong>Cuties Collection</strong></p>
+    </header>
+    <section class="container">
+      <h2>The Cuties Collection</h2>
+      <span>Sort dogs:</span>
+      <button class="btn sort-btn" data-sortdir="asc" data-container="collection-container">A-Z</button>
+      <button class="btn sort-btn" data-sortdir="desc" data-container="collection-container">Z-A</button>
+      <div id="collection-container" class="cards">
+        <!--<div class="card">
+          <div class="img-wrap">
+            <img src="https://cdn2.thedogapi.com/images/LvKF3cSkb.jpg" alt="dog image">
+          </div>
+          <div class="breed">Breed: American Foxhound</div>
+          <div class="group">Breed Group: Hound</div>
+        </div>-->
+      </div>
+    </section>
+    <section class="container">
+      <h2>Your Favorite Cuties</h2>
+      <span>Sort dogs:</span>
+      <button class="btn sort-btn" data-sortdir="asc" data-container="favorites-container">A-Z</button>
+      <button class="btn sort-btn" data-sortdir="desc" data-container="favorites-container">Z-A</button>
+      <ul>
+        <li id="Sporting"></li>
+        <li id="Working"></li>
+        <li id="Herding"></li>
+        <li id="Terrier"></li>
+        <li id="Toy"></li>
+        <li id="Non-Sporting"></li>
+        <li id="Hound"></li>
+        <li id="Other"></li>
+      </ul>
+      <div id="favorites-container" class="cards">
+      </div>
+    </section>
+    
+    
+    <script src="main.js" async defer></script>
+    <script src="https://kit.fontawesome.com/da0b902bb6.js" crossorigin="anonymous"></script>
+  </body>
+</html>
