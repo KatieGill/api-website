@@ -103,13 +103,8 @@ const breedCounter =  async (cardData) => {
 
 const updateCollections = (itemId, direction) => {
   const elm = document.getElementById(itemId)
-  if (itemId) {
-    if (direction === 'toFavs') {
-      favorites.appendChild(elm);
-    } else if (direction === 'toMain') {
-      collection.appendChild(elm);
-    }
-  }
+  const container = direction === 'toFavs' ? favorites : collection;
+  container.appendChild(elm);
 }
 
 /* set toggle between collections/favorites lists */
@@ -134,19 +129,11 @@ const setToggle = async (cardData) => {
 
 const sortData = (direction, container, cardArr) => {
   const cardContainer = document.getElementById(container);
-  if (direction === 'desc') {
-    cardArr.sort((a, b) => {
-      if (a.textContent < b.textContent) return 1;
-      else if (a.textContent > b.textContent) return -1;
-      else return 0;
+  cardArr.sort((a, b) => {
+    if (a.textContent < b.textContent) return direction === 'desc' ? 1 : -1;
+    else if (a.textContent > b.textContent) return direction === 'desc' ? -1 : 1;
+    else return 0;
     }); 
-  } else if (direction === 'asc') {
-    cardArr.sort((a, b) => {
-      if (b.textContent < a.textContent) return 1;
-      else if (b.textContent > a.textContent) return -1;
-      else return 0;
-  });
-}
   cardArr.forEach(card => cardContainer.appendChild(card));
 }
 
@@ -171,6 +158,13 @@ const dogCards = setDogCards(dogData);
 setToggle(dogCards);
 setSortBtn(dogCards);
 breedCounter(dogCards);
+
+
+ 
+  
+
+
+
 
 
 
