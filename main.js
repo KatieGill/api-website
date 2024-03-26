@@ -22,8 +22,19 @@ const favorites = document.getElementById('favorites-container');
 
 const randomNum = (num) => Math.floor(Math.random() * num);
 
+const loader = document.querySelector('#loading')
+
+const displayLoading = () => {
+  loader.classList.add("display")
+}
+
+const hideLoading = () => {
+  loader.classList.remove("display")
+}
+
 /* generate random list of dog IDs of specified length  */
 const breedIdArr = async (num, arr) => {
+  displayLoading()
   const availableIds = await arr;
   const idArr = [];
   while (num > 0) {
@@ -84,7 +95,8 @@ const setDogCards = async (dogData) => {
         dogInfo.appendChild(breedGroup);
       });
     });
-  const cards = await dogCards;
+  const cards = await dogCards
+  hideLoading();
   return cards;
 }
 
